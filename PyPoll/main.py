@@ -31,6 +31,11 @@ with open(electiondata_csv) as csv_file:
         total_correy = len(correy)
         total_li = len(li)
         total_otooley = len(otooley)
+        
+        percent_khan = total_khan / total_votes
+        percent_correy = total_correy / total_votes
+        percent_li = total_li / total_votes
+        percent_otooley = total_otooley / total_votes
 
 
 
@@ -38,10 +43,10 @@ print ("Election Results")
 print("---------------------------------------")
 print ("Total Votes: " + str(total_votes))
 print("---------------------------------------")
-print("Khan: " + str(total_khan))
-print ("Correy: " + str(total_correy))
-print("Li: " + str(total_li))
-print("O'Tooley: " + str(total_otooley))
+print("Khan: " + "{:.3%} ".format(percent_khan) + "(" + str(total_khan) + ")")
+print ("Correy: " + "{:.3%} ".format(percent_correy) + "(" + str(total_correy) + ")")
+print("Li: " + "{:.3%} ".format(percent_li) + "(" + str(total_li) + ")")
+print("O'Tooley: " + "{:.3%} ".format(percent_otooley) + "(" + str(total_otooley) + ")")
 print("---------------------------------------")
 print("Winner: ")
 print("---------------------------------------")
