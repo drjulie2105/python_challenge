@@ -50,6 +50,6 @@ with open(output_file, "w") as file:
     file.write("\n")
     file.write("Average Change: $" + str(average_change))
     file.write("\n")
-    file.write(f"Greatest Increase in Profits: " + str(greatest_increase_month) + " $" + str(greatest_increase))
+    file.write(f"Greatest Increase in Profits: " + str(greatest_increase_month) + " ($" + str(greatest_increase) + ")")
     file.write("\n")
-    file.write(f"Greatest Decrease in Profits: " + str(greatest_decrease_month) + " $" + str(greatest_decrease))
+    file.write(f"Greatest Decrease in Profits: " + str(greatest_decrease_month) + " ($" + str(greatest_decrease) + ")")
