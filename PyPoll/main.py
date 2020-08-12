@@ -37,7 +37,15 @@ with open(electiondata_csv) as csv_file:
         percent_li = total_li / total_votes
         percent_otooley = total_otooley / total_votes
 
-
+        
+        if total_khan > total_correy and total_li and total_otooley:
+            winner="Khan"
+        elif total_correy > total_khan and total_li and total_otooley:
+            winner="Correy"
+        elif total_li > total_khan and total_correy and total_otooley:
+            winner="Li"
+        else:
+            winner="O'Tooley"
 
 print ("Election Results")
 print("---------------------------------------")
@@ -48,5 +56,5 @@ print ("Correy: " + "{:.3%} ".format(percent_correy) + "(" + str(total_correy) +
 print("Li: " + "{:.3%} ".format(percent_li) + "(" + str(total_li) + ")")
 print("O'Tooley: " + "{:.3%} ".format(percent_otooley) + "(" + str(total_otooley) + ")")
 print("---------------------------------------")
-print("Winner: ")
+print("Winner: " + str(winner))
 print("---------------------------------------")
