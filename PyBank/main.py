@@ -23,8 +23,8 @@ with open(budgetdata_csv) as csv_file:
 greatest_increase = max(profit_loss)
 greatest_decrease = min(profit_loss)
 
-greatest_increase_month=(max(profit_loss), row[0])
-greatest_decrease_month=(min(profit_loss), row[0])
+greatest_increase_month=max(profit_loss), row[0]
+greatest_decrease_month=min(profit_loss), row[0]
 
 
 
@@ -33,8 +33,8 @@ print("---------------------------------------")
 print("Total Months: " + str(months))
 print("Total: $" + str(total_profitloss))
 print("Average Change: $" + str(average_change))
-print(f"Greatest Increase in Profits: " + str(greatest_increase_month) + " $" + str(greatest_increase))
-print(f"Greatest Decrease in Profits: " + str(greatest_decrease_month) + " $" + str(greatest_decrease))
+print(f"Greatest Increase in Profits: " + str(greatest_increase_month) + " ($" + str(greatest_increase) + ")")
+print(f"Greatest Decrease in Profits: " + str(greatest_decrease_month) + " ($" + str(greatest_decrease) + ")")
 
 output_file=os.path.join("summary.txt")
 
